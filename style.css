@@ -1,8 +1,9 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("https://media.istockphoto.com/id/184601291/photo/xxxl-dark-concrete.webp?b=1&s=170667a&w=0&k=20&c=KRRXq0P41imqerPjYF4EgX7QOdbybyprM8ofKYoIzT4=")
-}
+    background-image: url("https://media.istockphoto.com/id/184601291/photo/xxxl-dark-concrete.webp?b=1&s=170667a&w=0&k=20&c=KRRXq0P41imqerPjYF4EgX7QOdbybyprM8ofKYoIzT4=" )
+  
+  }
   .topnav {
     overflow: hidden;
     background-color: #000000;
@@ -74,17 +75,41 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
   border: 3px solid rgba(0, 0, 0, 0.8);
   border-radius: 10px;
-  padding: 20px;
-  font-size: 30px;
+  padding: 0px;
+  font-size: 14px;
   text-align: center;
+  width: 350px;
   }
   .container{
     display: grid;
     gap: 50px 100px;
     grid-template-columns: auto auto auto;
-    padding: 10px;
+    padding: 200px 280px;
+    padding-top:60px ;
   }
   img{
     width: 350px;
   }
-  
+  .fa-remove:hover{
+color: #fa4c4c;
+  }
+  .fa-edit:hover{
+    color: cyan;
+  }
+  .lien{
+    border:1px solid #000000;
+    border-radius: 4px;
+    border-color: #000000;
+    background-color: #b4b4b4;
+  }
+
+  #inp  {
+
+
+
+    margin-left : 1500px; 
+
+    margin-bottom:20px ;
+  }
+
+ 
