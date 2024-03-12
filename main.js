@@ -1,12 +1,13 @@
+const deleteMovie = (index) => {
+  document.getElementById(index).outerHTML = "";
+};
+// const searchParams = new URLSearchParams(window.location.search);
 function generateId(n) {
-  return Math.floor(Math.random() * (n + 1));
+  let id = Number(localStorage.getItem("index")) || 0;
+  localStorage.setItem("index", (id += 1));
+  console.log((id += 1));
+  return (id += 1);
 }
-/* var value = 0;
-function generate() {
-  value += 1;
-
-  return value;
-} */
 
 var moviesList = JSON.parse(localStorage.getItem("movie")) || [];
 $(".add").click(function () {
@@ -25,9 +26,20 @@ $(".add").click(function () {
 
   moviesList.push(movie);
   localStorage.setItem("movie", JSON.stringify(moviesList));
+
+  let container = document.getElementById("container");
+  container.innerHTML = `
+    ${container.innerHTML}
+    <div class="movie" id='${movie.id}'>
+              <img src="${movie.Image}" alt="" />
+              <h3>${movie.name}</h3>
+            <p>${movie.des}</p>
+           <a href="formulaire.html"> <i class="fa fa-edit"></i></a>
+            <button onclick="deleteMovie(${movie.id})"><i class="fa fa-remove"></i></button>
+          </div>
+    `;
 });
 let movie = JSON.parse(localStorage.getItem("movie"));
-console.log(movie);
 
 var film = movie.map(
   (movie) =>
@@ -40,9 +52,7 @@ var film = movie.map(
         </div>`
 );
 
-console.log(film);
 $(".container").append(film);
-console.log(localStorage);
 
 $("#btn1").click(function () {
   $("#movie1").remove();
