@@ -1,11 +1,31 @@
 const deleteMovie = (index) => {
   document.getElementById(index).outerHTML = "";
 };
+$("#btn1").click(function () {
+  $("#movie1").remove();
+});
+$("#btn2").click(function () {
+  $("#movie2").remove();
+});
+$("#btn3").click(function () {
+  $("#movie3").remove();
+});
+$("#btn4").click(function () {
+  $("#movie4").remove();
+});
+$("#btn5").click(function () {
+  $("#movie5").remove();
+});
+$("#btn6").click(function () {
+  $("#movie6").remove();
+});
+$("#btn7").click(function () {
+  $("#movie7").remove();
+});
 // const searchParams = new URLSearchParams(window.location.search);
 function generateId(n) {
   let id = Number(localStorage.getItem("index")) || 0;
   localStorage.setItem("index", (id += 1));
-  console.log((id += 1));
   return (id += 1);
 }
 
@@ -22,7 +42,7 @@ $(".add").click(function () {
   movie.name = name;
   movie.Image = img;
   movie.des = description;
-  movie.id = generateId(4);
+  movie.id = generateId();
 
   moviesList.push(movie);
   localStorage.setItem("movie", JSON.stringify(moviesList));
@@ -54,27 +74,6 @@ var film = movie.map(
 
 $(".container").append(film);
 
-$("#btn1").click(function () {
-  $("#movie1").remove();
-});
-$("#btn2").click(function () {
-  $("#movie2").remove();
-});
-$("#btn3").click(function () {
-  $("#movie3").remove();
-});
-$("#btn4").click(function () {
-  $("#movie4").remove();
-});
-$("#btn5").click(function () {
-  $("#movie5").remove();
-});
-$("#btn6").click(function () {
-  $("#movie6").remove();
-});
-$("#btn7").click(function () {
-  $("#movie7").remove();
-});
 function w3_open() {
   document.getElementById("main").style.marginLeft = "25%";
   document.getElementById("mySidebar").style.width = "25%";

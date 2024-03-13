@@ -1,8 +1,11 @@
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url("https://media.istockphoto.com/id/184601291/photo/xxxl-dark-concrete.webp?b=1&s=170667a&w=0&k=20&c=KRRXq0P41imqerPjYF4EgX7QOdbybyprM8ofKYoIzT4=" )
-  
+   background-size: cover;
+    background-image: url("https://i.natgeofe.com/n/8d557447-fedc-4328-b1b5-3f0976023997/03-megafezzan.jpg")
+
+  }
+  #closed{
+    background-color: #000000;
+    color: #000000;
   }
   .topnav {
     overflow: hidden;
@@ -88,7 +91,7 @@ body {
     padding-top:60px ;
   }
   img{
-    width: 350px;
+    width: 344px;
   }
   .fa-remove:hover{
 color: #fa4c4c;
@@ -102,14 +105,51 @@ color: #fa4c4c;
     border-color: #000000;
     background-color: #b4b4b4;
   }
+.nav{
+  justify-content: space-between;
+}
 
   #inp  {
-
-
-
     margin-left : 1500px; 
 
     margin-bottom:20px ;
   }
 
+ #openNav {
+
+
+  margin-top: 20px;
+ margin-left: 1400px;
  
+ }
+ .navi{
+  background-color: #000000;
+   color: #ddd;
+ border-radius: 0%;
+
+ }
+
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: #111;
+}
